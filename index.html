@@ -1,12 +1,373 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alok-Shikha Admin</title>
-    <link rel="shortcut icon" href="favicon.jpeg" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alok-Shikha Admin</title>
+<link rel="shortcut icon" href="favicon.jpeg" type="image/x-icon">
+<style>
+body {
+  margin: 0;
+  min-width: 250px;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  background-color: #f44336;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+.hidden{
+  display: none;
+
+}
+.hide:hover .hidden{
+  display: block;
+}
+
+/* Table  */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
 </head>
 <body>
+  <span class="hide">p<button class="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit mollitia, hic ab libero tenetur itaque sunt beatae, laudantium delectus nemo, quia voluptates aliquid tempora earum quisquam quasi fuga ducimus incidunt!</button></span>
+
+<div id="myDIV" class="header">
+  <h1 style="margin:5px">আলোক শিখা</h1>
+  <input type="text" id="myInput" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL">
+    <h3>শিক্ষকদের যে নিয়ম নীতি মানতে হবে</h3>
+  <li class="">যেকোনো কোর্সের ক্ষেত্রে 30% আলোক শিখা পাবে।</li>
+  <li class="">কমপক্ষে একটি কোর্স  এনরোল করতে হবে।</li>
+  <li class="">অনলাইন ক্লাস যথা সময়ে শুরু  করতে হবে।</li>
+  <li class="">ক্লাসে ফর্মাল পোষাক পরিধান 
+    করা উওম।</li>
+  <li class="">কোন প্রক্সি টিচার দিয়ে ক্লাস 
+    নেয়ানো যাবে না।</li>
+  <li>লাইভ ক্লাস এর যাবতীয় সাপোর্ট  আলোক শিখা দিবে
+    (লজিস্টিক ও জনবল)।</li>
+  <li class="">বিকাশের লেনদেন আলোক শিখা র অফিসিয়াল নম্বরে হবে।</li>
+  <li class="">আলোক শিখা র ব্যাংক এ কোর্স ফি জমা থাকবে।</li>
+  <li class="">প্রতি মাসের ক্লাস হিসেবে কোর্স ফি বণ্টন হবে।</li>
+  <li class="">প্রতি মাসে আলোক শিখা ২০/৩০ ডলার পেইজ প্রমট করবে।</li>
+  <li class="">প্রতি বিষয় এ  বিষয় Teacher কমপক্ষে ১০/২০ ডলার course শুরু হবার আগে /পরে প্রতি মাসে personal video boost করতে হবে।</li>
+  <li class="">আলোক শিখার নিজস্ব পেজ বা গ্রুপে ক্লাস নিতে হবে।</li>
+  <li class="">কোন শিক্ষক তার ব্যক্তিগত পেজ বা গ্রুপের লিংক শেয়ার করতে পারবেনা।</li>
+  <li class="">এমন কোন কাজ করা যাবে না, যা দ্বারা নিজের ও আলোক শিখার সুনাম ক্ষুন্ন হয়।</li>
+  <li class="">জাতীয় পরিচয় পত্র ও দুই কপি ছবি দিতে পারলে ভালো।</li>
+  <li class="">শিক্ষক সুলভ ব্যবহার কাম্য।</li>
+  <li class="">শিক্ষক হয়ে থাকতে হবে ভাই হওয়া যাবে না।</li>
+  <li class="">কারিগরি ত্রুটির কারণে ক্লাস নিতে অপারগ হলে বিকল্প ব্যবস্থা গ্রহণ করতে হবে।</li>
+  <li class="">শিক্ষকদের পরস্পরের প্রতি সহযোগিতা কাম্য।</li>
+  <li class="">সর্বোপরি আলোক শিখার সাথে স্থায়ী ভাবে যুক্ত হবার বা থাকার অনুরোধ থাকবে।</li>
+  
+  <!-- <h3>Devices</h3>
+  <li class="">Tripod (3500)</li>
+  <li class="">Smartphone (45000)</li>
+  <li class="">Laptop / Desktop (40K-50K )</li>
+  <li class="">DSLR (75000)</li>
+  <li class="">DSLR (IPS / Generator)</li>
+  <li class="">?</li> -->
+
+</ul>
+
+
+<div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th>Teachers</th>
+      <th>Subjects</th>
+      <th>Institute</th>
+      <th>Phone-No</th>
+    </tr>
+    <tr>
+      <td>Sohel Ahmed</td>
+      <td>English</td>
+      <td>Ideal School and College</td>
+      <td>01819271307</td>
+    </tr>
+    <tr>
+      <td>Abdul Aziz</td>
+      <td>Bangla</td>
+      <td>Ideal School and College</td>
+      <td>01556320243</td>
+      
+    </tr>
+    <tr>
+      <td>Rokib Hasan</td>
+      <td>ICT</td>
+      <td>Bangladesh Computer Council</td>
+      <td>01733327171</td>
+      
+    </tr>
+    <tr>
+      <td>Munne</td>
+      <td>General Math</td>
+      <td>Rajshahi College</td>
+      <td>01718823115</td>
+      
+    </tr>
+    <tr>
+      <td>Mahmudul Haq Sena</td>
+      <td>BGS</td>
+      <td>?</td>
+      <td>?</td>
+      
+    </tr>
+    <tr>
+      <td>Abdus Salam</td>
+      <td>Accounting</td>
+      <td>Dhaka Commerce College</td>
+      <td>01715301789</td>
+      
+    </tr>
+    <tr>
+      <td>?</td>
+      <td>Management</td>
+      <td>?</td>
+      <td>?</td>
+      
+    </tr>
+    <tr>
+      <td>?</td>
+      <td>Finance</td>
+      <td>?</td>
+      <td>?</td>
+      
+    </tr>
+    <tr>
+      <td>?</td>
+      <td>Marketing</td>
+      <td>?</td>
+      <td>?</td>
+      
+    </tr>
+    <tr>
+      <td>Tanvir</td>
+      <td>Physics</td>
+      <td>BUET</td>
+      <td>01673591876</td>
+      
+    </tr>
+    <tr>
+      <td>Abrar</td>
+      <td>Chemistry</td>
+      <td>Birdem</td>
+      <td>?</td>
+      
+    </tr>
+    <tr>
+      <td>Abrar</td>
+      <td>Biology</td>
+      <td>Birdem</td>
+      <td>?</td>
+      
+    </tr>
+    <tr>
+      <td>?</td>
+      <td>Higher Math</td>
+      <td>?</td>
+      <td>?</td>
+      
+    </tr>
+    <tr>
+      <td>?</td>
+      <td>Economics</td>
+      <td>?</td>
+      <td>?</td>
+      
+    </tr>
+    <tr>
+      <td>?</td>
+      <td>State</td>
+      <td>?</td>
+      <td>?</td>
+      
+    </tr>
     
+  </table>
+</div>
+
+<script>
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+</script>
+
 </body>
 </html>
