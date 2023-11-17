@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin</title>
+<link rel="shortcut icon" href="adminsite.webp" type="image/x-icon">
+<style>
+.collapsible {
+  background-color: brown;
+  color: whitesmoke;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 2px solid gold;
+  margin: 1px;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: black;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+li{
+    line-height: 30px;
+}
+/* Table  */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  table, th, td {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Alok-Shikha Admin Panel</h1>
+<button type="button" class="collapsible">শিক্ষকদের যে নিয়ম নীতি মানতে হবে</button>
+<div class="content">
+    <li class="">যেকোনো কোর্সের ক্ষেত্রে 30% আলোক শিখা পাবে।</li>
+    <li class="">কমপক্ষে একটি কোর্স  এনরোল করতে হবে।</li>
+    <li class="">অনলাইন ক্লাস যথা সময়ে শুরু  করতে হবে।</li>
+    <li class="">ক্লাসে ফর্মাল পোষাক পরিধান 
+      করা উওম।</li>
+    <li class="">কোন প্রক্সি টিচার দিয়ে ক্লাস 
+      নেয়ানো যাবে না।</li>
+    <li>লাইভ ক্লাস এর যাবতীয় সাপোর্ট  আলোক শিখা দিবে
+      (লজিস্টিক ও জনবল)।</li>
+    <li class="">বিকাশের লেনদেন আলোক শিখা র অফিসিয়াল নম্বরে হবে।</li>
+    <li class="">আলোক শিখা র ব্যাংক এ কোর্স ফি জমা থাকবে।</li>
+    <li class="">প্রতি মাসের ক্লাস হিসেবে কোর্স ফি বণ্টন হবে।</li>
+    <li class="">প্রতি মাসে আলোক শিখা ২০/৩০ ডলার পেইজ প্রমট করবে।</li>
+    <li class="">প্রতি বিষয় এ  বিষয় Teacher কমপক্ষে ১০/২০ ডলার course শুরু হবার আগে /পরে প্রতি মাসে personal video boost করতে হবে।</li>
+    <li class="">আলোক শিখার নিজস্ব পেজ বা গ্রুপে ক্লাস নিতে হবে।</li>
+    <li class="">কোন শিক্ষক তার ব্যক্তিগত পেজ বা গ্রুপের লিংক শেয়ার করতে পারবেনা।</li>
+    <li class="">এমন কোন কাজ করা যাবে না, যা দ্বারা নিজের ও আলোক শিখার সুনাম ক্ষুন্ন হয়।</li>
+    <li class="">জাতীয় পরিচয় পত্র ও দুই কপি ছবি দিতে পারলে ভালো।</li>
+    <li class="">শিক্ষক সুলভ ব্যবহার কাম্য।</li>
+    <li class="">শিক্ষক হয়ে থাকতে হবে ভাই হওয়া যাবে না।</li>
+    <li class="">কারিগরি ত্রুটির কারণে ক্লাস নিতে অপারগ হলে বিকল্প ব্যবস্থা গ্রহণ করতে হবে।</li>
+    <li class="">শিক্ষকদের পরস্পরের প্রতি সহযোগিতা কাম্য।</li>
+    <li class="">সর্বোপরি আলোক শিখার সাথে স্থায়ী ভাবে যুক্ত হবার বা থাকার অনুরোধ থাকবে।</li>
+    
+</div>
+
+<button type="button" class="collapsible">Deed</button>
+<div class="content">
+  <li>বিনিয়োগ।</li>
+  <li>লাভ-লোকসান।</li>
+  <li>শেয়ার।</li>
+  <li>পরবর্তী বিনিয়োগ।</li>
+  <li>নতুন অংশীদার।</li>
+  <li>নতুন কোন কোর্স চালু করার ক্ষেত্রে।</li>
+  <li>ব্যাংক হতে টাকা উত্তোলন।</li>
+  <li>কর্মচারী নিয়োগের ক্ষেত্রে।</li>
+  <li>প্রতিষ্ঠানের নামে ঋণ গ্রহণ।</li>
+  <li>অংশীদারের ব্যক্তিগত দায় প্রতিষ্ঠান গ্রহণ করবে না।</li>
+  <li>কোর্স শিক্ষক অগ্রাধিকার</li>
+  <li>সম্পত্তি (Virtual & Physical) রক্ষণাবেক্ষণ ও নিরাপত্তা।</li>
+  <li>যেকোনো কোর্স সমূহের মুনাফা অংশ (ব্যক্তি ও আলোক শিখা)</li>
+  <li>সম্পত্তি (Virtual & Physical) ক্রয়-বিক্রয়</li>
+  <li>অংশীদারকে বেতন প্রদান</li>
+  <li>পদ সমূহ</li>
+  <li>বিরোধ মীমাংসা</li>
+  <li>কোন অংশীদার ব্যবসা হতে বের হতে চাইলে</li>
+  <li>বিলোপ সাধন</li>
+  <li>সর্বসম্মতিক্রমে নিয়ম নীতি পরিবর্তন</li>
+</div>
+
+<button type="button" class="collapsible">Devices</button>
+<div class="content">
+  <li class="">Tripod</li>
+  <li class="">Smartphone</li>
+  <li class="">Microphone</li>
+  <li class="">IPS / UPS / Generator (Important)</li>
+  <li class="">Laptop / Desktop</li>
+  <li class="">DSLR (75000)</li>
+  <li class="">?</li><br>
+  <h5>Others Branch</h5><br>
+  <li>Tripod</li>
+  <li>Lights</li>
+  <li>Microphone (Optional)</li><br><br><br>
+
+  <input type="radio" name="" id="">নিরবিচ্ছিন্ন বিদ্যুৎ ও ইন্টারনেট <br><br><br><hr>
+  <hr>
+</div>
+<button type="button" class="collapsible">দায়িত্ব সমূহ</button>
+<div class="content">
+    <img src="monir.png" height="200px" width="200px" style="max-width:100%;height:auto;">
+    <h2>Monir Vai</h2> <br><br>
+    <input type="radio" name="" id="">Daily Video Upload (3-5)(FB Page, Public Group, YouTube )<br><br>
+    <input type="radio" name="" id="">Video Description & Thumbnail<br><br>
+    <input type="radio" name="" id="">Video Shoot & Instruments Management<br><br>
+    <input type="radio" name="" id="">Video Edit Monthly (15-20)<br><br>
+    <button>Salary = ........</button>
+    <hr>
+    
+    <img src="employe.png" height="200px" width="200px" style="max-width:100%;height:auto;">
+    <h2>Mr.x</h2> <br><br>
+    <input type="radio" name="" id="">Computer Operator<br><br>
+    <button>Salary = ........</button><hr>
+    
+    <img src="rokibhasan.png" height="200px" width="200px" style="max-width:100%;height:auto;">
+    <h2>Rokib Hasan</h2> <br><br>
+    <input type="radio" name="" id="">Class Taking<br><br>
+    <input type="radio" name="" id="">Digital Marketing<br><br>
+    <input type="radio" name="" id="">Website Developing and Maintaining <br><br>
+    <input type="radio" name="" id="">App Developing and Maintaining<br><br>
+    <button>Salary = ........</button>
+    <hr>
+    
+    <img src="azizsir.png" height="200px" width="200px" style="max-width:100%;height:auto;">
+    <h2>Aziz Sir</h2> <br><br>
+    <input type="radio" name="" id="">Class Taking<br><br>
+    <input type="radio" name="" id="">Script Writing<br><br>
+    <input type="radio" name="" id="">License<br><br>
+    <button>Salary = ........</button>
+    <hr>
+    
+    <img src="sohelsir.jpeg" height="200px" width="200px" style="max-width:100%;height:auto;">
+    <h2>Sohel Sir</h2> <br><br>
+    <input type="radio" name="" id="">Class Taking<br><br>
+    <input type="radio" name="" id="">Full Management<br><br>
+    <button>Salary = ........</button>
+    <hr>
+    
+   
+</div>
+<button type="button" class="collapsible">Classroom Use</button>
+<div class="content">
+  <li>আলোক শিখার ৩০% থেকে  ক্লাসরুম ব্যয় বাদ দেওয়ার পর মুনাফা বন্টন।</li>
+  <li>?</li>
+</div>
+<button type="button" class="collapsible"></button>
+<div class="content">
+  
+</div>
+<!-- <button type="button" class="collapsible">Open Section 3</button>
+<div class="content">
+  
+</div> -->
+<h3>Teachers Panel</h3>
+<div style="overflow-x:auto;">
+    <table>
+      <tr>
+        <th>Teachers</th>
+        <th>Subjects</th>
+        <th>Institute</th>
+        <th>Phone-No</th>
+      </tr>
+      <tr>
+        <td>Sohel Ahmed</td>
+        <td>English</td>
+        <td>Ideal School and College</td>
+        <td>01819271307</td>
+      </tr>
+      <tr>
+        <td>Abdul Aziz</td>
+        <td>Bangla</td>
+        <td>Ideal School and College</td>
+        <td>01556320243</td>
+        
+      </tr>
+      <tr>
+        <td>Rokib Hasan</td>
+        <td>ICT</td>
+        <td>Bangladesh Computer Council</td>
+        <td>01733327171</td>
+        
+      </tr>
+      <tr>
+        <td>Munne</td>
+        <td>General Math</td>
+        <td>Rajshahi College</td>
+        <td>01718823115</td>
+        
+      </tr>
+      <tr>
+        <td>Mahmudul Haq Sena</td>
+        <td>BGS</td>
+        <td>?</td>
+        <td>?</td>
+        
+      </tr>
+      <tr>
+        <td>Abdus Salam</td>
+        <td>Accounting</td>
+        <td>Dhaka Commerce College</td>
+        <td>01715301789</td>
+        
+      </tr>
+      <tr>
+        <td>?</td>
+        <td>Management</td>
+        <td>?</td>
+        <td>?</td>
+        
+      </tr>
+      <tr>
+        <td>?</td>
+        <td>Finance</td>
+        <td>?</td>
+        <td>?</td>
+        
+      </tr>
+      <tr>
+        <td>?</td>
+        <td>Marketing</td>
+        <td>?</td>
+        <td>?</td>
+        
+      </tr>
+      <tr>
+        <td>Tanvir</td>
+        <td>Physics</td>
+        <td>BUET</td>
+        <td>01673591876</td>
+        
+      </tr>
+      <tr>
+        <td>Abrar</td>
+        <td>Chemistry</td>
+        <td>Birdem</td>
+        <td>?</td>
+        
+      </tr>
+      <tr>
+        <td>Abrar</td>
+        <td>Biology</td>
+        <td>Birdem</td>
+        <td>?</td>
+        
+      </tr>
+      <tr>
+        <td>?</td>
+        <td>Higher Math</td>
+        <td>?</td>
+        <td>?</td>
+        
+      </tr>
+      <tr>
+        <td>?</td>
+        <td>Economics</td>
+        <td>?</td>
+        <td>?</td>
+        
+      </tr>
+      <tr>
+        <td>?</td>
+        <td>State</td>
+        <td>?</td>
+        <td>?</td>
+        
+      </tr>
+      
+    </table>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
